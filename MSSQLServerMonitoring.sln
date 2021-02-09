@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{50C081E3-623A-4D17-8CD0-412C59F01397}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AE587ABE-6DA9-47E0-848C-495A5AC32BE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLServerMonitoring.Api", "src\MSSQLServerMonitoring.Api\MSSQLServerMonitoring.Api.csproj", "{9FD3FC00-67A0-4110-92BC-F3A0B09E3A87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLServerMonitoring.Application", "src\MSSQLServerMonitoring.Application\MSSQLServerMonitoring.Application.csproj", "{8D543C06-510A-4354-974F-A7815F9C2E48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLServerMonitoring.Connector", "src\MSSQLServerMonitoring.Connector\MSSQLServerMonitoring.Connector.csproj", "{F31FB516-E0E0-4611-92F1-F55D7A42E71C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLServerMonitoring.Domain", "src\MSSQLServerMonitoring.Domain\MSSQLServerMonitoring.Domain.csproj", "{32BC37D2-6831-408D-B066-7CD9997DE1E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLServerMonitoring.Infrastructure", "src\MSSQLServerMonitoring.Infrastructure\MSSQLServerMonitoring.Infrastructure.csproj", "{5D701DFF-154C-4CC6-8A35-3E0566335DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLServerMonitoring.Infrastructure.Migrations", "src\MSSQLServerMonitoring.Infrastructure.Migrations\MSSQLServerMonitoring.Infrastructure.Migrations.csproj", "{2DC0A0B4-A8ED-4DBF-919B-1F7C9A3638B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FD3FC00-67A0-4110-92BC-F3A0B09E3A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD3FC00-67A0-4110-92BC-F3A0B09E3A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD3FC00-67A0-4110-92BC-F3A0B09E3A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD3FC00-67A0-4110-92BC-F3A0B09E3A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D543C06-510A-4354-974F-A7815F9C2E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D543C06-510A-4354-974F-A7815F9C2E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D543C06-510A-4354-974F-A7815F9C2E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D543C06-510A-4354-974F-A7815F9C2E48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31FB516-E0E0-4611-92F1-F55D7A42E71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31FB516-E0E0-4611-92F1-F55D7A42E71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31FB516-E0E0-4611-92F1-F55D7A42E71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31FB516-E0E0-4611-92F1-F55D7A42E71C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BC37D2-6831-408D-B066-7CD9997DE1E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BC37D2-6831-408D-B066-7CD9997DE1E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BC37D2-6831-408D-B066-7CD9997DE1E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BC37D2-6831-408D-B066-7CD9997DE1E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D701DFF-154C-4CC6-8A35-3E0566335DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D701DFF-154C-4CC6-8A35-3E0566335DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D701DFF-154C-4CC6-8A35-3E0566335DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D701DFF-154C-4CC6-8A35-3E0566335DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DC0A0B4-A8ED-4DBF-919B-1F7C9A3638B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC0A0B4-A8ED-4DBF-919B-1F7C9A3638B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC0A0B4-A8ED-4DBF-919B-1F7C9A3638B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC0A0B4-A8ED-4DBF-919B-1F7C9A3638B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9FD3FC00-67A0-4110-92BC-F3A0B09E3A87} = {50C081E3-623A-4D17-8CD0-412C59F01397}
+		{8D543C06-510A-4354-974F-A7815F9C2E48} = {50C081E3-623A-4D17-8CD0-412C59F01397}
+		{F31FB516-E0E0-4611-92F1-F55D7A42E71C} = {50C081E3-623A-4D17-8CD0-412C59F01397}
+		{32BC37D2-6831-408D-B066-7CD9997DE1E2} = {50C081E3-623A-4D17-8CD0-412C59F01397}
+		{5D701DFF-154C-4CC6-8A35-3E0566335DAA} = {50C081E3-623A-4D17-8CD0-412C59F01397}
+		{2DC0A0B4-A8ED-4DBF-919B-1F7C9A3638B1} = {50C081E3-623A-4D17-8CD0-412C59F01397}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C37EF6B-7A14-4F28-BB13-B04AB34387EB}
+	EndGlobalSection
+EndGlobal
