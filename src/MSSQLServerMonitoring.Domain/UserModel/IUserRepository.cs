@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MSSQLServerMonitoring.Domain.UserModel
+﻿namespace MSSQLServerMonitoring.Domain.UserModel
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepositoryBase<User>
     {
     }
 }

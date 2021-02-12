@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MSSQLServerMonitoring.Domain;
 using MSSQLServerMonitoring.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
