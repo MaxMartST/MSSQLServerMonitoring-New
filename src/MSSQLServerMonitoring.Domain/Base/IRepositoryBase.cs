@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace MSSQLServerMonitoring.Domain
+namespace MSSQLServerMonitoring.Domain.Base
 {
     public interface IRepositoryBase<T>
     {

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MSSQLServerMonitoring.Api.Dto;
+using MSSQLServerMonitoring.Api.Mappers;
 using MSSQLServerMonitoring.Domain.UserModel;
 using MSSQLServerMonitoring.Infrastructure.RepositoryWrapper;
 using System.Collections.Generic;
@@ -16,16 +18,18 @@ namespace MSSQLServerMonitoring.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<List<User>> ListAll()
+        public async Task<List<UserDto>> ListAll()
         {
             List<User> users = await _repositoryWrapper.User.GetAll();
-            return users;
+            return users.Map();
         }
 
         [HttpPost]
-        public async Task AddUser(User user)
+        public async Task AddUser([FromBody] UserDto userDto)
         {
+            var user = new User(userDto.Login, userDto.Email, userDto.Password);
             await _repositoryWrapper.User.Add(user);
+            _repositoryWrapper.Save();
         }
     }
 }

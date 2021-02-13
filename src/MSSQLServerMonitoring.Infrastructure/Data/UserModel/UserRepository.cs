@@ -1,8 +1,5 @@
 ﻿using MSSQLServerMonitoring.Domain.UserModel;
 using MSSQLServerMonitoring.Infrastructure.RepositoryBase;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MSSQLServerMonitoring.Infrastructure.Data.UserModel
 {
