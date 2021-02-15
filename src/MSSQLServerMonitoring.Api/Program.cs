@@ -32,6 +32,7 @@ namespace MSSQLServerMonitoring.Api
 				{
 					await DBInitializer.Initialize(context);
 				}
+
 			}
 
 			host.Run();

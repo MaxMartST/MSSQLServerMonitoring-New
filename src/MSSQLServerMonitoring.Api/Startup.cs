@@ -7,12 +7,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.FeatureManagement;
 using Microsoft.OpenApi.Models;
+using MSSQLServerMonitoring.Application;
+using MSSQLServerMonitoring.Connector;
 using MSSQLServerMonitoring.Domain.HangFireModel;
 using MSSQLServerMonitoring.Infrastructure.Clock;
 using MSSQLServerMonitoring.Infrastructure.Data;
 using MSSQLServerMonitoring.Infrastructure.Data.HangFireModel;
 using MSSQLServerMonitoring.Infrastructure.Factories;
 using MSSQLServerMonitoring.Infrastructure.RepositoryWrapper;
+using MSSQLServerMonitoring.Infrastructure.Service.Adupter;
 using MSSQLServerMonitoring.Infrastructure.Service.HangFireService;
 
 namespace MSSQLServerMonitoring.Api
@@ -53,9 +56,14 @@ namespace MSSQLServerMonitoring.Api
                 .AddRepositoryWrapper()
                 .AddClock()
                 .AddRepositories()
-                .AddRepositoryContextFactory();
+                .AddRepositoryContextFactory()
+                .AddApplication();
 
-            services.AddScoped<IHangFireCounterRepository>(provider => new HangFireCounterRepository(Configuration.GetConnectionString("DefaultConnection"), provider.GetService<IRepositoryContextFactory>()));
+            services
+                .AddScoped<IHangFireCounterRepository>(provider => new HangFireCounterRepository(Configuration.GetConnectionString("DefaultConnection"), provider.GetService<IRepositoryContextFactory>()))
+                .AddMSSQLServerConnector(new ConfigureMSSQLServerConnectorComponent { BaseApiUrl = Configuration.GetConnectionString("DefaultConnection") })
+                .AddAdupter();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MSSQLServerMonitoring.Api", Version = "v1" });

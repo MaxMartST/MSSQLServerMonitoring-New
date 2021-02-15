@@ -2,9 +2,11 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MSSQLServerMonitoring.Domain.HangFireModel;
+using MSSQLServerMonitoring.Domain.QueryModel;
 using MSSQLServerMonitoring.Domain.UserModel;
 using MSSQLServerMonitoring.Infrastructure.Clock;
 using MSSQLServerMonitoring.Infrastructure.Data.HangFireModel.EntityConfigurations;
+using MSSQLServerMonitoring.Infrastructure.Data.QueryModel.EntityConfigurations;
 using MSSQLServerMonitoring.Infrastructure.Data.UserModel.EntityConfigurations;
 using System;
 using System.Linq;
@@ -23,12 +25,14 @@ namespace MSSQLServerMonitoring.Infrastructure.Data
         {
         }
         public DbSet<User> User { get; set; }
+        public DbSet<Query> Query { get; set; }
         public DbSet<HangFireCounter> HangFireCounter { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
             builder.ApplyConfiguration(new UserMap());
+            builder.ApplyConfiguration(new QueryMap());
             builder.ApplyConfiguration(new HangFireCounterMap());
 
             foreach (var property in builder.Model.GetEntityTypes().SelectMany(t => t.GetProperties()))

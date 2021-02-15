@@ -1,13 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MSSQLServerMonitoring.Domain.HangFireModel;
+using MSSQLServerMonitoring.Domain.QueryModel;
 using MSSQLServerMonitoring.Domain.UserModel;
 using MSSQLServerMonitoring.Infrastructure.Data.HangFireModel;
+using MSSQLServerMonitoring.Infrastructure.Data.QueryModel;
 using MSSQLServerMonitoring.Infrastructure.Data.UserModel;
-using MSSQLServerMonitoring.Infrastructure.Factories;
 using System;
-using System.Configuration;
 
 namespace MSSQLServerMonitoring.Infrastructure.Data
 {
@@ -17,7 +16,8 @@ namespace MSSQLServerMonitoring.Infrastructure.Data
         {
             return services
                 .AddScoped<IUserRepository, UserRepository>()
-                .AddScoped<IHangFireCounterRepository, HangFireCounterRepository>(); ; 
+                .AddScoped<IHangFireCounterRepository, HangFireCounterRepository>()
+                .AddScoped<IQueryRepository, QueryRepository>();
         }
 
         public static IServiceCollection AddDatabase<T>(this IServiceCollection services, string connectionString)
